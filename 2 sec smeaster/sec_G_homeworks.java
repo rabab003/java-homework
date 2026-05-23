@@ -128,12 +128,3 @@ public class sec_G_homeworks {
 
 
 
-
-
-
-
-
-
-
-    }
-}
