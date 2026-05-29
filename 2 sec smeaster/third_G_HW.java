@@ -20,13 +20,6 @@ public class third_G_HW {
         int r2 = input.nextInt();
         System.out.print("Enter columns of matrix B: ");
         int c2 = input.nextInt();
-        
-        // التحقق من إمكانية الضرب
-        if (c1 != r2) {
-            System.out.println("Cannot multiply! Columns of A must equal rows of B.");
-            return;
-        }
-        
         // إنشاء المصفوفات
         int[][] A = new int[r1][c1];
         int[][] B = new int[r2][c2];
@@ -40,7 +33,6 @@ public class third_G_HW {
                 A[i][j] = input.nextInt();
             }
         }
-        
         // قراءة عناصر المصفوفة B
         System.out.println("\nEnter elements of matrix B:");
         for (int i = 0; i < r2; i++) {
@@ -48,8 +40,7 @@ public class third_G_HW {
                 System.out.print("B[" + i + "][" + j + "] = ");
                 B[i][j] = input.nextInt();
             }
-        }
-        
+       } 
         // ضرب المصفوفات
         for (int i = 0; i < r1; i++) {
             for (int j = 0; j < c2; j++) {
@@ -57,8 +48,7 @@ public class third_G_HW {
                     result[i][j] += A[i][k] * B[k][j];
                 }
             }
-        }
-        
+       } 
         // طباعة النتيجة
         System.out.println("\nMultiplication Result:");
         for (int i = 0; i < r1; i++) {
@@ -67,7 +57,6 @@ public class third_G_HW {
             }
             System.out.println();
         }
-        
         input.close();
     }
 }
